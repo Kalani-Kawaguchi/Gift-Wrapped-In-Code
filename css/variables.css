@@ -1,0 +1,15 @@
+/*
+    F7F7F7 - WHITE
+    2B2B2B - BLACK
+    C0392B - RED
+    2D6A4F - GREEN
+    F1C40F = GOLD
+*/
+:root {
+  --bg: #F7F7F7;
+  --text: #2B2B2B;
+  --red: #C0392B;
+  --green: #2D6A4F;
+  --gold: #D4AF37;
+}
+

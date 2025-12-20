@@ -1,0 +1,37 @@
+christmas-gift-site/
+│
+├── index.html            # Landing / password page
+├── home.html             # Main hub after unlocking
+│
+├── css/
+│   ├── reset.css         # Optional: normalize/reset styles
+│   ├── variables.css     # Colors, fonts, spacing
+│   ├── base.css          # Global styles
+│   ├── animations.css    # Snow, fades, transitions
+│   └── pages/
+│       ├── index.css     # Landing page styles
+│       └── home.css      # Hub/advent styles
+│
+├── js/
+│   ├── config.js         # Password, dates, messages
+│   ├── index.js          # Password logic
+│   ├── home.js           # Advent doors / interactions
+│   └── effects.js        # Snow, audio, typewriter
+│
+├── assets/
+│   ├── images/
+│   │   ├── icons/
+│   │   ├── pokemon/
+│   │   ├── demon-slayer/
+│   │   └── christmas/
+│   │
+│   ├── audio/
+│   │   └── winter-lofi.mp3
+│   │
+│   └── fonts/
+│
+├── data/
+│   └── messages.json     # Letters, reasons, memories
+│
+├── README.md             # Notes for yourself
+└── favicon.ico

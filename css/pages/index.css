@@ -1,0 +1,32 @@
+.heart{
+    --size: clamp(60px, 20vw, 120px);
+    width: var(--size);
+    height: var(--size);
+    background: var(--red);
+    transform: rotate(45deg);
+    box-shadow: calc(var(--size) * 0.1) calc(var(--size) * -0.1) calc(var(--size) * .2) black,
+    calc(var(--size) * 0.1) calc(var(--size) * 0.1) calc(var(--size) * 0.1) black,
+    calc(var(--size) * -0.1) calc(var(--size) * 0.1) calc(var(--size) * 0.2) black;
+    cursor: pointer;
+    position: relative;
+}
+.heart::before{
+    content: "";
+    width: var(--size);
+    height: var(--size);
+    background: var(--red);
+    position: absolute;
+    border-radius: 50%;
+    top: calc(var(--size) * -0.5);
+    left: 0;
+}
+.heart::after{
+    content: "";
+    width: var(--size);
+    height: var(--size);
+    background: var(--red);
+    position: absolute;
+    border-radius: 50%;
+    top: 0;
+    left: calc(var(--size) * -0.5);
+}
