@@ -10,7 +10,6 @@ main {
 }
 
 .text {
-    max-width: 85ch;
     overflow-y: hidden;
     max-height: 0;
     opacity: 0;
@@ -18,6 +17,7 @@ main {
     transition: max-height 1.0s linear, opacity 1s linear;
     background: #D7F5D3;
     padding: 16px;
+    max-width: 600px;
 }
 
 main.is-open .text {

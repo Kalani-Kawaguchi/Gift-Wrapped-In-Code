@@ -35,7 +35,6 @@ main{
     align-items: center; /* vertical */
     justify-content: center; /* horizontal */
     padding: 16px;
-    max-width: 65ch;
     margin-inline: auto;
 }
 
