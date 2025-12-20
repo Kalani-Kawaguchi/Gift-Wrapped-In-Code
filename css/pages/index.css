@@ -1,0 +1,28 @@
+main {
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  position: relative;
+  gap: 1.5rem;
+}
+
+.text {
+    max-width: 85ch;
+    overflow-y: hidden;
+    max-height: 0;
+    opacity: 0;
+    flex-direction: column;
+    transition: max-height 1.0s linear, opacity 1s linear;
+    background: #D7F5D3;
+    padding: 16px;
+}
+
+main.is-open .text {
+    max-height: 60vh;
+    overflow-y: auto;
+    display: flex;
+    opacity: 1;
+}

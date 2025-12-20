@@ -9,7 +9,7 @@
     calc(var(--size) * -0.1) calc(var(--size) * 0.1) calc(var(--size) * 0.2) black;
     cursor: pointer;
     position: relative;
-    transition: transform 1s;
+    animation: heartbeat 2.4s ease-in-out infinite;
 }
 
 .heart::before,
@@ -32,12 +32,20 @@
     left: calc(var(--size) * -0.5);
 }
 
-.heart:hover{
-    transform: rotate(45deg) scale(1.2);
-}
+@keyframes heartbeat{
+    0% {
+        transform: rotate(45deg) scale(1);
+    }
 
-@media (hover: hover){
-    .heart:hover{
-        transform: rotate(45deg) scale(1.2);
+    15% {
+        transform: rotate(45deg) scale(1.08);
+    }
+
+    30% {
+        transform: rotate(45deg) scale(1);
+    }
+
+    100% {
+        transform: rotate(45deg) scale(1);
     }
 }
