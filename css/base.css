@@ -43,6 +43,10 @@ main > * {
     max-width: 100%;
 }
 
+div {
+    -webkit-tap-highlight-color: transparent;
+}
+
 @media (min-width: 768px) {
     header{
         padding: 32px;

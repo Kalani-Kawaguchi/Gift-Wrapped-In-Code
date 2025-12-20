@@ -9,17 +9,10 @@
     calc(var(--size) * -0.1) calc(var(--size) * 0.1) calc(var(--size) * 0.2) black;
     cursor: pointer;
     position: relative;
+    transition: transform 1s;
 }
-.heart::before{
-    content: "";
-    width: var(--size);
-    height: var(--size);
-    background: var(--red);
-    position: absolute;
-    border-radius: 50%;
-    top: calc(var(--size) * -0.5);
-    left: 0;
-}
+
+.heart::before,
 .heart::after{
     content: "";
     width: var(--size);
@@ -27,6 +20,24 @@
     background: var(--red);
     position: absolute;
     border-radius: 50%;
+}
+
+.heart::before{
+    top: calc(var(--size) * -0.5);
+    left: 0;
+}
+
+.heart::after{
     top: 0;
     left: calc(var(--size) * -0.5);
+}
+
+.heart:hover{
+    transform: rotate(45deg) scale(1.2);
+}
+
+@media (hover: hover){
+    .heart:hover{
+        transform: rotate(45deg) scale(1.2);
+    }
 }
