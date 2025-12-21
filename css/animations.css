@@ -1,8 +1,8 @@
 .heart{
-    --size: clamp(60px, 20vw, 120px);
+    --size: 10vw;
     width: var(--size);
     height: var(--size);
-    background: var(--red);
+    background: red;
     transform: rotate(45deg);
     box-shadow: calc(var(--size) * 0.1) calc(var(--size) * -0.1) calc(var(--size) * .2) black,
     calc(var(--size) * 0.1) calc(var(--size) * 0.1) calc(var(--size) * 0.1) black,
@@ -17,7 +17,7 @@
     content: "";
     width: var(--size);
     height: var(--size);
-    background: var(--red);
+    background: red;
     position: absolute;
     border-radius: 50%;
 }
@@ -47,5 +47,61 @@
 
     100% {
         transform: rotate(45deg) scale(1);
+    }
+}
+
+.snow,
+.snow::before,
+.snow::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: -1;
+    background-image: 
+        radial-gradient(circle at 5% calc(var(--y) * 1), var(--snow) 3px, transparent 7px),
+        radial-gradient(circle at 65% calc(var(--y) * 1.5), var(--snow) 2px, transparent 6px);
+}
+
+@property --y {
+    syntax: "<percentage>";
+    inherits: false;
+    initial-value: -1%;
+}
+
+.snow {
+    animation: snowfall 28s linear infinite, wind 14s ease-in-out infinite;
+    background-size: 65% 100%;
+    opacity: 75%;
+}
+
+.snow::before {
+    animation: snowfall 20s linear infinite, wind 10s ease-in-out infinite;
+    inset: -5rem 0 0;
+    opacity: 50%;
+    background-size: 40% 100%;
+}
+
+.snow::after {
+    animation: snowfall 14s linear infinite, wind 7s ease-in-out infinite;
+    inset: -2rem 0 0;
+    opacity: 65%;
+    background-size: 32% 100%;
+}
+
+@keyframes snowfall {
+    from {
+        --y: -1%;
+    }
+
+    to {
+        --y: 101%;
+    }
+}
+
+@keyframes wind {
+    50% {
+        translate: 10%;
     }
 }

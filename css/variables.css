@@ -1,15 +1,30 @@
 /*
-    F7F7F7 - WHITE
-    2B2B2B - BLACK
-    C0392B - RED
-    2D6A4F - GREEN
-    F1C40F = GOLD
+    #FBF6F2 - WHITE
+    #2B2B2B - BLACK
+    #4E6B5A - PINE
+    #E8B7C5 - RED
+    #BFD8C2 - SAGE
+    #E6C97A - GOLD
 */
 :root {
-  --bg: #F7F7F7;
+  --bg: #FBF6F2;
   --text: #2B2B2B;
-  --red: #C0392B;
-  --green: #2D6A4F;
-  --gold: #D4AF37;
+  --red: #E8B7C5;
+  --green: #BFD8C2;
+  --gold: #E6C97A;
+  --snow: #B8E2F2;
+  --pine: #4E6B5A;
 }
 
+.great-vibes-regular {
+  font-family: "Great Vibes", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.playfair-display {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
