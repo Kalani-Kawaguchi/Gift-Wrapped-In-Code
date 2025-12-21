@@ -1,5 +1,6 @@
 .heart{
     --size: 10vw;
+    content: "";
     width: var(--size);
     height: var(--size);
     background: red;

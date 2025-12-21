@@ -1,6 +1,6 @@
 const heart = document.querySelector(".heart");
-const main = document.querySelector("main");
+const text = document.querySelector(".text");
 
 heart.addEventListener("click", () => {
-    main.classList.add("is-open");
+    text.classList.add("is-open");
 })
