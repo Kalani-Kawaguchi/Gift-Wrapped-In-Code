@@ -2,9 +2,9 @@
     #FBF6F2 - WHITE
     #2B2B2B - BLACK
     #4E6B5A - PINE
-    #E8B7C5 - RED
-    #BFD8C2 - SAGE
-    #E6C97A - GOLD
+    #E8B7C5 - RED - emotional highlights, key interactive focus
+    #BFD8C2 - SAGE - hover, dividers, nav link hover, supp UI elements
+    #E6C97A - GOLD - rare emphasis, icons, special moments, small underline or highlights
 */
 :root {
   --bg: #FBF6F2;
@@ -16,12 +16,14 @@
   --pine: #4E6B5A;
 }
 
+/*  Titles, emotional lines, names/sign-offs */
 .great-vibes-regular {
   font-family: "Great Vibes", cursive;
   font-weight: 400;
   font-style: normal;
 }
 
+/* Paragraphs, letters, nav, buttons, captions */
 .playfair-display {
   font-family: "Playfair Display", serif;
   font-optical-sizing: auto;
