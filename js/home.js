@@ -24,14 +24,13 @@ function calculateTimeSinceMet() {
     }
 
     if (hours < 0) {
-      days--;
       hours += 24;
     }
 
-    timeMetDays.textContent = `${totalDays} day${totalDays !== 1 ? "s" : ""}`;
-    timeMetHours.textContent = `${hours} hour${hours !== 1 ? "s" : ""}`;
-    timeMetMinutes.textContent = `${minutes} minute${minutes !== 1 ? "s" : ""}`;
-    timeMetSeconds.textContent = `${seconds} second${seconds !== 1 ? "s" : ""}`;
+    timeMetDays.textContent = `${totalDays}`;
+    timeMetHours.textContent = `${hours}`;
+    timeMetMinutes.textContent = `${minutes}`;
+    timeMetSeconds.textContent = `${seconds}`;
 }
 
 function calculateTimeSinceDate() {
@@ -60,14 +59,13 @@ function calculateTimeSinceDate() {
     }
 
     if (hours < 0) {
-      days--;
       hours += 24;
     }
 
-    timeDateDays.textContent = `${totalDays} day${totalDays !== 1 ? "s" : ""}`;
-    timeDateHours.textContent = `${hours} hour${hours !== 1 ? "s" : ""}`;
-    timeDateMinutes.textContent = `${minutes} minute${minutes !== 1 ? "s" : ""}`;
-    timeDateSeconds.textContent = `${seconds} second${seconds !== 1 ? "s" : ""}`;
+    timeDateDays.textContent = `${totalDays}`;
+    timeDateHours.textContent = `${hours}`;
+    timeDateMinutes.textContent = `${minutes}`;
+    timeDateSeconds.textContent = `${seconds}`;
 }
 
 calculateTimeSinceMet();

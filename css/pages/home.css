@@ -18,7 +18,7 @@
 
 .nav-title {
     font-size: clamp(2.75rem, 4vw, 4.5rem);
-    line-height: .75;
+    line-height: clamp(0.9, 1vw, 1.1);
 }
 
 .button {
@@ -33,7 +33,7 @@
 }
 
 main{
-    gap: 5rem;
+    gap: clamp(2.5rem, 6vw, 5rem);
 }
 
 .timers {
@@ -64,7 +64,26 @@ main{
 }
 
 .time-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: clamp(80px, 22vw, 110px);
     border: 3px solid var(--red);
     border-radius: 10px;
     padding: 5px;
+}
+
+@media (max-width: 480px) {
+    .time-group {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 1rem;
+        justify-items: center;
+    }
+
+    .time-section {
+        width: 100%;
+        width: clamp(100px, 22vw, 110px);
+    }
 }
