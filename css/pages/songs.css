@@ -39,8 +39,13 @@ main{
 }
 
 .song-icon {
+    background: none;
+    border: none;
+    cursor: pointer;
     font-size: 1.25rem;
     color: var(--red);
+    padding: 0.25rem;
+    border-radius: 50%;
     flex-shrink: 0;
 }
 
