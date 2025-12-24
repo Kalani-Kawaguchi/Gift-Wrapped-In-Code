@@ -127,6 +127,7 @@ images.forEach((fileName) => {
 
     const img = document.createElement("img");
     img.src = `images/${fileName}`;
+    img.loading = "lazy";
     img.alt = "";
 
     li.appendChild(img);
