@@ -1,0 +1,100 @@
+.image-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: clamp(0.75rem, 2vw, 1.25rem);
+
+    width: 100%;
+}
+
+.image-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.75rem;
+    background: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.06);
+    aspect-ratio: 1/1;
+}
+
+.image-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+@media (min-width: 600px) {
+    .image-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 900px) {
+    .image-list {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (min-width: 1200px) {
+    .image-list {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+.modal {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: none;
+}
+
+.modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.modal-content {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    padding: 2rem;
+    pointer-events: none;
+}
+
+.modal-image {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: 1rem;
+    pointer-events: auto;
+}
+
+.modal-close {
+    position: absolute;
+    top: -0.75rem;
+    right: -0.75rem;
+
+    width: 2rem;
+    height: 2rem;
+
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+
+    background: var(--primary);
+    color: white;
+    font-size: 1.25rem;
+}
+
+.modal.is-open {
+    display: block;
+}
