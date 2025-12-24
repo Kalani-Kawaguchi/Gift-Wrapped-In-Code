@@ -70,10 +70,15 @@ main{
     justify-content: center;
     align-items: center;
     width: clamp(80px, 22vw, 110px);
-    border: 3px solid var(--red);
+    /* border: 3px solid var(--red); */
     border-radius: 10px;
     padding: 5px;
-    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 6px 14px color-mix(in srgb, var(--red), transparent 20%);
+    background: linear-gradient(
+        to bottom,
+        color-mix(in srgb, var(--red), transparent 60%),
+        color-mix(in srgb, var(--red), transparent 100%)
+    );
 }
 
 .time-section .value {
@@ -84,8 +89,9 @@ main{
 
 .time-section .label {
     font-size: 0.85rem;
-    opacity: 0.75;
+    opacity: 1;
     margin-top: 0.25rem;
+    color: color-mix(in srgb, var(--green), var(--text) 60%);
 }
 
 @media (max-width: 480px) {
